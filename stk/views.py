@@ -1,3 +1,10 @@
-from django.shortcuts import render
+from django.http import HttpResponse
+import requests
+from requests.auth import HTTPBasicAuth
+import json
+from . credentials import MpesaAccessToken, LipanaMpesaPpassword
 
-# Create your views here.
+from django.shortcuts import render,redirect
+from django.contrib import messages
+
+
